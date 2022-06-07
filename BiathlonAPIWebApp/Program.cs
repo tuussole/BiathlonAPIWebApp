@@ -4,6 +4,8 @@ using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+//builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+
 builder.Services.AddRazorPages();
 
 builder.Services.AddDbContext<BiathlonAPIContext>(option => option.UseNpgsql(
